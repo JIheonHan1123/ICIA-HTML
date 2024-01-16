@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formatting Element</title>
+    <style>
+      span {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <b>우리나라</b>
+    <!-- 요소가 의미를 가진다. -> semantic 요소 -->
+    <!-- 
+        시맨틱 HTML은 단순히 표현이나 모양을 정의하기 보다는 
+        웹 페이지와 웹 애플리케이션에 있는 정보의 의미를 
+        강화하기 위해 HTML 마크업을 사용하는 것 
+    -->
+    <!-- 
+        strong은 강조 -> semantic하다
+        b는 두껍게 -> semantic하지않다 -> 강조가 아니라 단순히 두껍게하는 스타일만 남은 태그
+        
+        그래서 강조가 아닌 단순하게 두껍게 하고 싶으면 span으로 감싸고 span에 css를 먹이는게 바람직하다.
+     -->
+    <p>우리나라 <strong>좋은</strong> 나라</p>
+    <p>우리나라 <b>좋은</b> 나라</p>
+    <p>우리나라 <span>좋은</span> 나라</p>
+
+    <!-- 이탤릭체 -->
+    <!-- 
+        여기서도 
+        i - semantic하지않다 -> 이탤릭체 쓸 때보다 아이콘 띄울 때 더 많이 씀
+        em - semantic하다
+    -->
+    <p>우리나라 <em>좋은</em> 나라</p>
+    <p>우리나라 <i>좋은</i> 나라</p>
+  </body>
+</html>

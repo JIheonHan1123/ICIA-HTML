@@ -1,0 +1,10 @@
+/* 내부(Internal) css를 외부(external) css로 분리 */
+.red {
+  color: red;
+}
+
+h4,
+h5,
+h6 {
+  color: deeppink;
+}

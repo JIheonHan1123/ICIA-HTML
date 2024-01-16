@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 다른 사람들이 만든 폰트를 사용하기 위해서 링크를 가져와야 함 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Document</title>
+    <style>
+      /* 선택자 범위: 태그 선태자 > 클래스 선택자 > 아이디 선택자 */
+      /* 범위가 좁을수록 우선순위가 높다 */
+      /* id속성은 요소 1개를 선택할 때 */
+      /* class속성은 요소 여러개 선택할 때 */
+      #target {
+        color: red;
+      }
+
+      .target {
+        color: aqua;
+      }
+
+      .fa-automobile,
+      .fa-apple {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="target" class="">우리나라 좋은나라</p>
+    <p>우리나라 좋은나라</p>
+    <p class="target">우리나라 좋은나라</p>
+    <p class="target">우리나라 좋은나라</p>
+
+    <!-- 클래스를 여러개 줄 때는 공백으로 구분한다. -->
+    <i class="fa fa-automobile"></i>
+    <i class="fa fa-apple" aria-hidden="true"></i>
+    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+    <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+  </body>
+</html>

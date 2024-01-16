@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가운데정렬</title>
+    <style>
+      div {
+        border: 1px solid red;
+        min-height: 620px;
+      }
+      p {
+        background-color: yellow;
+        width: 200px;
+        height: 100px;
+        /* block요소를 가운데 정렬: 상하 0, 좌우 auto */
+        /* inline 요소에서는 margin이 안먹는다! */
+        /* 결론: block요소를 가운데 정렬하는 법 = width주고, margin은 0 auto */
+        margin: 0 auto;
+
+        /* 내용을 가운데 정렬 */
+        text-align: center;
+
+        /* 내용이 수직으로는 정렬이 안된다. */
+        /* 내용이 한 줄일 때 수직가운데 정렬 하는 법 */
+        /* 줄 간격을 높이와 동일하게 해준다. */
+        line-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 부모의 높이는 자식을 포함할 만큼 -->
+    <div>
+      <p>우리나라</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타일: block과 inline</title>
+    <style>
+      div {
+        background-color: yellow;
+        border: 1px solid red;
+        width: 200px;
+      }
+      span {
+        background-color: yellow;
+        border: 1px solid red;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  -->
+    <!-- block: 한줄 전체를 차지(내용이 없어도 일단 한줄을 차지하고본다) -->
+    <!-- 넓이를 주면 적용됨 -->
+    <!-- block요소를 포함하는 block요소: <div>, <table>, <form> -->
+    <div>좋은나라</div>
+    <div>좋은나라</div>
+
+    <!-- inline: 내용만큼만 차지-->
+    <!-- 넓이를 주면 적용되지 않는다 => 적용되는 순간 inline요소의 정의에 위배됨. -->
+    <!-- inline요소를 포함하는 inline요소: <span>, <img>, <a> -->
+    <span>우리나라</span>
+    <span>우리나라</span>
+    <!-- 
+      cf) inline요소에 넓이를 적용하고 싶으면 display속성을 변경해준다.
+          cf) display속성: block, inline, inline-block
+          display: inline-block;
+    -->
+
+    <!--  -->
+    <!-- block요소는 inline요소를 포함할 수 있다 -->
+    <p>우리나라 <b>좋은</b> 나라</p>
+    <!-- inline요소는 inline요소만 포함할 수 있다. -->
+  </body>
+</html>

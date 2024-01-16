@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box-sizing 속성</title>
+    <style>
+      div {
+        border: 1px solid rebeccapurple;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      .content-box {
+        padding: 20px;
+      }
+
+      .border-box {
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 보통 너비가 높이를 계산할 때 padding과 border(외곽선)를 포함하지 않고 계산함 -->
+    <div class="content-box">A</div>
+
+    <!-- box-sizing:border-box 를 주면 너비나 높이를 계산할 때 padding과 border를 포함해서 계산 -->
+    <div class="border-box">B</div>
+
+    <div>C</div>
+  </body>
+</html>

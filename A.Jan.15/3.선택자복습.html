@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* reset: 전체 선택자로 브라우저 기본 css를 덮어썼다 */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu ol {
+        list-style: none;
+      }
+
+      .menu li {
+        display: inline-block;
+        background-color: skyblue;
+        color: white;
+        width: 150px;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 30px;
+        /* 얘를 안해주면 마우스 커서 올렸을 때 border 1px이 생겨서 약간 움직이는 것처럼 보임 */
+        border: 1px solid skyblue;
+        /* 근데 이렇게 하는 것보다 전체선택자로 제어하는게 더 좋음 */
+        /* 다음 페이지에 계속 */
+      }
+
+      .menu ol li:hover {
+        border: 1px solid deepskyblue;
+        color: black;
+        background-color: white;
+        cursor: pointer;
+      }
+
+      /* .menu {
+        margin: 10px;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <!-- '메뉴'는 서로 관련된 요소들의 집합이고 div보다는 ul이나 ol을 보통 사용한다. -->
+      <ol>
+        <li>학원 소개</li>
+        <li>교육 과정</li>
+        <li>취업지원센터</li>
+        <li>고객 센터</li>
+      </ol>
+    </div>
+  </body>
+</html>

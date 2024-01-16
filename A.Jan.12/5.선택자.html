@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자</title>
+    <style>
+      /* 1 태그 선택자 = 10 클래스 선택자 = 100 아이디 선택자 */
+      /* 앞 숫자는 우선순위 */
+      /* 대부분 클래스로 작업하다가 어쩔 수 없을 때 쓰는게 아이디 선택자 */
+
+      /* 전체선택자: 우선순위 0. css초기화(reset)=기본css지정 목적으로 사용 */
+      * {
+        margin: 0;
+      }
+
+      /* 우선순위 1 => 태그선택자는 단독으로 사용안하는게 좋음(거의 금기) */
+      p {
+        font-weight: bold;
+        color: red;
+      }
+
+      /* 우선순위 10 => 클래스선택자 */
+      .underline {
+        text-decoration: underline;
+      }
+
+      /* 우선순위 100 => 100>1 => yellow가 이김 */
+      #target {
+        color: yellow;
+      }
+
+      /* span중에서 underline */
+      /* 우선순위 1+10 =11 => */
+      span.underline {
+        text-decoration: none;
+      }
+      /* span .underline 이렇게 띄어쓰기 하면 span하위에 있는 .underline을 찾는거임 */
+
+      /* 
+      선택할 때 
+      a,b -> a와 b
+      a b -> a에 소속된 b (하위선택자)
+      a.b -> a중에서 b를 찾는거임(a 중에서 b가 걸린 놈)
+             cf) 하위선택자 a .b랑 헷갈릴 수 있음 주의 (a의 자식 중에 b가 걸린 놈)
+      a>b -> a의 자식요소 b
+      */
+    </style>
+  </head>
+  <body>
+    <p>우리나라 좋은나라</p>
+    <p class="underline" id="target">우리나라 좋은나라</p>
+    <p>우리나라 좋은나라</p>
+    <p class="underline">우리나라 좋은나라</p>
+    <p>우리나라 좋은나라</p>
+    <span class="underline">연습</span>
+
+    <!-- 선택자 총정리 Jan.15 -->
+    <div id="me">
+      <div>자식</div>
+      <div>
+        <div>손주</div>
+      </div>
+    </div>
+    <!-- 
+      전체선택자 . : 우선순위 0, 주로 reset목적으로 사용
+     -->
+  </body>
+</html>

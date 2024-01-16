@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: red;
+      }
+
+      /* ex1) p의 색을 orange, 가운데 정렬하시오 */
+      /* cf) 가운데정렬 text-align속성을 center로 준다 */
+      /* id 선택자: # */
+      #target {
+        font-size: 500%;
+        font-weight: 700;
+        /* background-color: skyblue; */
+        color: orange;
+        text-align: center;
+      }
+
+      body {
+        /*지금은 연습이라 그러지만 원래 body건드는건 금기임*/
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--
+         위 css때문에 h1과 p가 글씨 디자인은 똑같이 보이지만
+         h1은 엄연히 제목이고 p는 엄연히 내용이다.
+    -->
+    <h1>제목입니다</h1>
+    <p id="target">내용입니다</p>
+  </body>
+</html>

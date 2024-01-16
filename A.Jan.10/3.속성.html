@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- 
+    태그의 부가정보를 속성(attribute)라고 한다. 
+    html은 태그와 속성까지 모두 표준화되어 있다(정해져있다)
+
+    태그는 태그자체만으로는 동작 안 할수도 있다. => 이럴 때 속성값을 부여해준다.
+
+    이 문서의 언어는 한글이다 -> 스크린리더가 한글로 읽어준다
+    장애인도 인터넷을 평등하게 사용해야 한다 -> 웹접근성(경제적으로 중요하진 않지만 도덕적으로 중요한거)
+
+    html태그의 lang속성은 이 문서를 작성한 언어를 지정한다
+    여기서 ko는 시각장애인용 한글(읽어주는거) = 웹 접근성(장애인도 웹을 이욯하는데에 있어 불편함이 없어야 한다)
+-->
+<html lang="ko">
+  <head>
+    <!-- character set(문자집합)이 UTF-8이어야 한글이 정상적으로 지원된다 -->
+    <meta charset="UTF-8" />
+
+    <!-- 
+      viewport: 문서의 "확대", "축소" 설정 cf) 애플에서 만들었음(아이폰 나올 때 같이 나옴)
+      휴대폰에서 웹사이트를 보기위해 만든 설정인데 요즘은 휴대폰이 발전해서 의미가 없다.
+    -->
+    <!-- initial-scale=1.0: 확대, 축소 없음을 의미 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 하이퍼텍스트 = 링크가 걸린 문서 => 링크태그 = <a> -->
+    <!--  
+    <a href="https://www.naver.com/">네이버로</a>
+    <a href="https://www.naver.com/" target="_blank">네이버로</a>
+    -->
+    <a href="https://www.naver.com/" target="_blank" title="네이버로 이동">네이버로</a>
+
+    <!-- 이미지태그 img -->
+    <!-- alt도 웹접근성 속성이다 -->
+    <!-- <img src="https://imgnews.pstatic.net/image/030/2018/09/09/0002739633_001_20180914142048823.jpg?type=w647" alt="musk" width="400px"/> -->
+
+    <!-- 이미지를 너비 150px로 출력하고 클릭하면 네이버로 이동 -->
+    <a href="https://www.naver.com/">
+      <img src="https://imgnews.pstatic.net/image/030/2018/09/09/0002739633_001_20180914142048823.jpg?type=w647" alt="musk" width="150px" />
+    </a>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+      CSS: Cascading Style Sheet 
+      원래 html은 내용과 디자인을 담당 했는데
+      널리 사용되면서 디자인을 분리해 전용 표현을 사용한다.
+
+      그래서 xml이랑 비슷해보임
+      현대의 html에서는 태그가 가지는 의미가 중요
+      */
+
+      /* 선택자(selector): css의 적용대상을 지정하는 방식 */
+      /* 여기서는 h1이 선택자 (태그선택자) */
+      h1 {
+        color: red;
+      }
+
+      /* ex1) h2 태그를 선택해 글자색을 노랑색으로 */
+      h2 {
+        color: yellow;
+      }
+
+      /* 여러개를 선택할 수도 있다 */
+      h1,
+      h2 {
+        text-decoration: underline;
+      }
+
+      /* h4, h5, h6의 글자색을 deeppink로 */
+      h4,
+      h5,
+      h6 {
+        color: deeppink;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      emmet: 사용하면 html 빨리 작성할 수 있음 
+      h1*6: h1태그가 6개 생긴다
+      Ctrl+Shift+Alt 하고 방향키: 커서를 수직방향으로 잡을 수 있음(h1태그 6개의 내용을 한번에 작성가능)
+    -->
+    <h1>제목1</h1>
+    <h2>제목2</h2>
+    <h3>제목3</h3>
+    <h4>제목4</h4>
+    <h5>제목5</h5>
+    <h6>제목6</h6>
+    <!-- 
+      1. h요소는 한줄을 차지한다
+      2. h요소는 margin을 가진다.
+      => element는 디자인을 가진다.
+     -->
+    <p>h태그는 제목을 의미하며 1수준에서 6수준까지 있다</p>
+    <p>항상 h1태그부터 순서대로 사용해야 함</p>
+  </body>
+</html>

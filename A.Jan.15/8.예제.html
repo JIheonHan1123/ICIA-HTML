@@ -1,0 +1,49 @@
+<!-- https://hasaway2.github.io/example1/007.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* reset: 전체 선택자로 브라우저 기본 css를 덮어썼다 */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu ol {
+        list-style: none;
+        font-size: 0;
+      }
+
+      .menu li {
+        font-size: 12px;
+        display: inline-block;
+        background-color: lightsalmon;
+        border: 1px solid black;
+        width: 120px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .menu ol li:hover {
+        font-weight: bold;
+        color: white;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <ol>
+        <li>학원 소개</li>
+        <li>교육 과정</li>
+        <li>취업지원센터</li>
+        <li>고객 센터</li>
+      </ol>
+    </div>
+  </body>
+</html>
