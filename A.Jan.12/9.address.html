@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>절대주소 vs 상대주소</title>
+  </head>
+  <body>
+    <!-- 물리적주소 =mac address(랜카드 주소) -->
+
+    <!-- 
+        vscode 라이브서버에서 실행했을 때 절대주소
+        http://127.0.0.1:5500/A.Jan.12/9.address.html
+
+        이걸 스프링mvc에서 실행했을 때 절대주소
+        http://127.0.0.1:5500/ICIA-HTML/A.Jan.12/9.address.html
+
+        이렇게 주소만드는 방식이 달라서 /로 시작하는 경우가 많다
+        /A.Jan.12/9.address.html
+
+        => 그래서 보통 /로 시작하면 절대주소, /로 시작하지 않으면 상대주소.
+     -->
+
+    <h1>상대주소</h1>
+    <a href="4.link태그.html">4.link태그로</a>
+    <a href="../A.Jan.10/4.css.html">4.css로</a>
+    <!-- 상대주소: 현재파일의 위치를 기준으로 이동 -->
+    <!-- 
+      파일의 위치가 바뀌면 href값도 바뀐다. 
+      상대주소만으로는 현재 파일과 다른 폴더에 있는 파일은 찾을 수 없다.
+      => 그래서 절대주소 쓰는게 더 선호된다.
+    -->
+    <!-- cf) 맨 앞에 .. 붙이면 부모폴더로 올라간다. -->
+
+    <h1>절대주소</h1>
+    <!-- 원래는 http://... 이렇게 시작하는데 위에 설명처럼 조질수도 있어서 -->
+    <a href="/A.Jan.12/4.link태그.html">4.link태그로</a>
+    <a href="/A.Jan.10/4.css.html">4.css로</a>
+
+    <!-- #은 아직 안만들었다. 나중에 만들거다 라는 일종의 메시지 -->
+    <a href="#">링크</a>
+  </body>
+</html>
