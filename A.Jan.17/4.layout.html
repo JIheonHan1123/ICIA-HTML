@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <style>
+      * {
+        /* 나중엔 그냥 reset.css 깔아서 하면 됨 */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #app {
+        width: 600px;
+        margin: 0 auto;
+      }
+
+      header {
+        background-color: violet;
+        height: 50px;
+      }
+
+      nav {
+      }
+
+      aside {
+        background-color: red;
+        width: 100px;
+        height: 200px;
+      }
+
+      .left {
+        float: left;
+      }
+
+      .right {
+        float: right;
+      }
+
+      section {
+        min-height: 600px;
+        width: 400px;
+        float: left;
+        background-color: lightgray;
+      }
+
+      main {
+        overflow: hidden;
+      }
+
+      nav ul {
+        overflow: hidden;
+      }
+
+      nav li {
+        list-style: none;
+        float: left;
+        width: 100px;
+        background-color: skyblue;
+        border-radius: 10px;
+        margin-right: 3px;
+
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+
+        /* 
+            margin이 0인데 서로 떨어져서 나온다? 
+            이거 붙이고 싶으면 약간 꼼수로 -값 주면 됨
+            margin-left: -5px;
+        */
+      }
+
+      nav li:hover {
+        background-color: deepskyblue;
+        color: white;
+        cursor: pointer;
+      }
+
+      footer {
+        height: 50px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <header>헤더</header>
+      <nav>
+        <ul>
+          <li>홈</li>
+          <li>로그인</li>
+          <li>소개</li>
+          <li>인사말</li>
+        </ul>
+      </nav>
+      <main>
+        <aside class="left">광고</aside>
+        <section>본문</section>
+        <aside class="left">광고</aside>
+      </main>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>
