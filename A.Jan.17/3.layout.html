@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시맨틱(semantic)태그를 이용한 시맨틱 마크업</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      #app {
+        width: 1000px;
+        margin: 0 auto;
+        border: 1px solid red;
+        /* ㄴ얘 때문에 넓이가 1002가 되니까 box-sizing을 준다 */
+      }
+
+      /* main은 높이주지 않는 이유는 main에 들어갈 내용의 높이는 알 수 없기 때문 */
+      /* prettier-ignore */
+      header, nav, footer {
+        height: 50px;
+        border: 1px solid cyan;
+      }
+
+      aside {
+        height: 300px;
+        width: 200px;
+        background-color: deeppink;
+      }
+
+      .left {
+        float: left;
+      }
+
+      section {
+        float: left;
+        width: 598px;
+
+        min-height: 600px;
+        background-color: lightgrey;
+      }
+
+      .right {
+        float: right;
+      }
+
+      main {
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 다 div로 묶어도 되지만 sematic하지 않다. -->
+    <div id="app">
+      <header>로고</header>
+      <nav>메인메뉴</nav>
+      <main>
+        <aside class="left">왼쪽 부가정보</aside>
+        <section>
+          <article>본문</article>
+          <!-- html entity code : 특수문자 넣는 방법 -->
+          특수문자 작다: &lt;<br />
+          공백: &nbsp;
+        </section>
+        <aside class="right">오른쪽 부가정보</aside>
+      </main>
+      <footer>고객센터번호 등 다른 부가정보 copyright &copy;2024</footer>
+    </div>
+  </body>
+</html>

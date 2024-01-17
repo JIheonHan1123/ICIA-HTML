@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*
+        css display: inline, block, inline-block
+
+        <div를 좌에서 우로 배치하는 방법>
+        display: inline-block (보통 레이아웃 잡을 때 쓰진 않고 메뉴 만들 때 많이 씀)
+        display: flex
+        float: left, right (왼쪽에 갖다놔, 오른쪽에 갖다놔하는게 float)
+        position: relative, absolute (내가 원하는 임의의 위치에 갖다놓는게 position)
+
+      */
+
+      #app {
+        border: 1px solid blue;
+        overflow: hidden;
+      }
+
+      .left {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        float: left;
+        /*
+            부모의 높이는 자식을 포함한 높이인데
+            float된 요소는 공중에 떠버림 (공중에 떠서 이동)
+            그래서 부모의 높이가 0이 되고 아래쪽 요소들이 위로 치고 올라온다.
+            => 부모의 높이가 정상적으로 계산되게 만들자 = clear
+               (부모요소의 스타일에 overflow: hidden; 를 해주면 된다)
+               (css표준: overflow 속성은 float을 클리어한다.)
+
+            float은 반드시 clear되어야 한다
+        */
+      }
+
+      .right {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="left">왼</div>
+      <div class="right">오</div>
+    </div>
+  </body>
+</html>
