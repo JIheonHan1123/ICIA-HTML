@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head></head>
+  <body>
+    <!-- form을 서버로 보낸다. -->
+    <!-- form안의 내용이 action속성으로 전달된다: action =서버(백엔드)의 url -->
+
+    <!-- form안의 내용을 전달하는 것.을 submit이라고 한다. -->
+    <!-- form안에 있는 버튼은 submit으로 동작한다. -->
+    <!-- submit하지 않으려면 type='button'을 지정해준다. -->
+    <!-- 근데 왜 submit을 안하냐? => 데이터를 보내기 전에 검증해야하기 때문 -->
+
+    <!-- method: submit하는 방식 -->
+    <!-- 
+        html에서의 get과 post의 차이
+        get: 여러번 실행해도 서버의 변경사항이 없다 = 반복실행해도 안전하다(상관없다) -> 즐겨찾기가 된다
+        post: 서버가 변경된다. 반복실행하면 안된다(결제) -> 즐겨찾기가 안된다
+
+        cf)
+        method가 틀리면 405에러가 뜬다. ex)서버가 post인데 get으로 보냄.
+        서버주소가 틀리면 404에러가 뜬다.
+     -->
+
+    <!-- 
+        enctype 
+
+        urlencoded: 파일업로드 안 할 때
+        form-data: 파일업로드 할 때
+
+        어차피 기본값은 글자라서 안써줘도 되고
+        파일 업로드 할 때만 enctype속성에 form-data를 주면 된다
+    -->
+    <form action="http://www.naver.com">
+      <!-- 
+            python에서의 딕셔너리 표현
+            {"num" : 100}
+
+            html에서의 딕셔너리 표현
+            http://www.naver.com?num=100
+         -->
+      <input name="num" value="100" />
+      <button>보내기</button>
+    </form>
+  </body>
+</html>
