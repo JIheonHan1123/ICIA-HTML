@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        1. front와 back은 둘 다 백에서 운영할 수 있다 (MVC 또는 model2)
+            - only web만 가능
+            - front에서 back으로 넘기는 방식: form
+            - back에서 front로 넘기는 방식: back기술마다 다르다
+
+        2.  front와 back을 별개로 운영할 수 있다. (rest 방식)
+            - 프론트와 백을 분리
+              (web, 안드로이드, ios 프론트를 백과 동시에 개발할 수 있다)
+     -->
+
+    <form action="http://localhost:5500/sample1" method="get">
+      <!-- 
+        id 속성: 프론트(css, js)에서 사용하는 이름 (서버로 안넘어감)
+        name 속성: 백에서 사용하는 이름 (서버로 넘어가는 이름)
+        => 용도만 다르지 그 요소를 표현하는건 동일하기 때문에 보통 이름은 같게 설정한다.
+
+        주소 뒤에 값이 붙을 때는 ?로 붙고 그 값이 여러개 일 때는 &로 연결한다.
+        http://localhost:5500/sample1?irum=spring&password=1234
+        여기서! age는 name이 없기 때문에 주소에 포함되지 않는다 (name속성만 서버로 넘어감)
+
+        form안에 있는데 왜 name을 안줄까? => 비밀번호 확인 기능 같은 경우에는 서버로 넘길 필요가 없기 때문
+       -->
+      <input name="irum" id="irum" value="spring" /><br />
+      <input name="password" id="password" value="1234" /><br />
+      <input id="age" value="20" />
+      <button>보내기</button>
+    </form>
+  </body>
+</html>
