@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    #page {
+      width: 800px;
+      margin: 0 auto;
+    }
+    header, nav, footer {
+      height: 50px;
+      border : 1px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+    }
+    header {
+      letter-spacing: 1.5em;
+    }
+    aside {
+      width: 100px;
+      height:200px;
+      background-color: lightseagreen;
+    }
+    section {
+      width: 600px;
+      min-height: 600px;
+      background-color: white;
+    }
+    main {
+      display: flex;
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div id="page">
+    <header>
+      <h1>ICIA Web Board</h1>
+    </header>
+    <nav>
+      <p>메뉴 영역입니다</p>
+    </nav>
+    <main>
+      <aside>
+      </aside>
+      <section>
+        여기는 본문 영역입니다
+      </section>
+      <aside>
+      </aside>
+    </main>
+    <footer>
+      copyright &copy;2024 All Right Reserved
+    </footer>
+  </div>
+</body>
+</html>
