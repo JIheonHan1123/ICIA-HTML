@@ -11,6 +11,29 @@
         bottom: 10px;
         right: 10px;
       }
+
+      #move {
+        position: absolute;
+        /* position: absolute;
+          부모를 기준으로 이동 
+          부모가 없으면 화면 좌측상단 기준으로 이동
+          부모는 relative만 부모가 될 수 있다
+          원래 위치는 채워진다
+        */
+
+        /* position: relative; */
+        /* position: relative; 
+          자신의 원래 위치를 기준으로 이동
+          원래 위치는 비어있다
+        */
+
+        /* 결론: relative는 부모가 되고 absolute로 이동 */
+        /* 
+          position속성의 기본값: static 
+          static은 absolute의 부모가 될 수 없다.
+          absolute의 부모는 relative다
+        */
+      }
     </style>
   </head>
   <body>
@@ -24,5 +47,10 @@
     <p>ㅇㄹㄴㄹ ㅈㅇㄴㄹ</p>
     <p>ㅇㄹㄴㄹ ㅈㅇㄴㄹ</p>
     <p>ㅇㄹㄴㄹ ㅈㅇㄴㄹ</p>
+
+    <div style="background-color: darkgreen">A</div>
+    <div style="background-color: deeppink">B</div>
+    <div id="move" style="background-color: blueviolet">C</div>
+    <div style="background-color: aquamarine">D</div>
   </body>
 </html>

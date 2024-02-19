@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .top {
+        height: 500px;
+      }
+      .parent {
+        position: relative;
+        height: 500px;
+        border: 1px solid red;
+      }
+      .child {
+        position: absolute;
+        top: 50px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>position과 부모/자식</h1>
+    <div class="top"></div>
+    <div class="parent">
+      <div class="child">I am 자식이에요</div>
+    </div>
+  </body>
+</html>

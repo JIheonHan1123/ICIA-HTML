@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>API 서비스와 AJAX</title>
+  </head>
+  <body>
+    <img id="img" />
+    <script>
+      // 요청하면 결과를 json으로 제공하는 서버: API서버
+      // AJAX: 2008년 구글이 만든 화면을 부분갱신하는 기술
+
+      // 서버에 부분갱신요청(ajax 요청을 보내자)을 jQeury로 보내자
+      // $.ajax는 jQuery함수 이름임
+      // API 서버는 json 문자열 응답을 보내줌 -> 원래 문자열을 JSON.parse()해야한다 -> 웹브라우저가 자동으로 js객체로 변환해준다
+      //
+      // $.ajax({
+      //   url: "API 주소",
+      //   method: "get 또는 post (get은 생략가능)",
+      //   data: "서버로 넘기는 urlencoded 값",
+      //   success: function () {
+      //     "ajax요청이 성공했을 때 실행되는 함수";
+      //   },
+      //   error: function () {
+      //     "ajax요청이 실패했을 때 실행되는 함수";
+      //   },
+      // });
+      //
+
+      $.ajax({
+        url: "https://dog.ceo/api/breeds/image/random",
+        success: function (result) {
+          $("#img").attr("src", result.message);
+        },
+        error: function () {
+          alert("네트워크 오류 발생");
+        },
+      });
+    </script>
+  </body>
+</html>

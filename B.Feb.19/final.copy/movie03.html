@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="img" style="height: 300px" />
+    <button id="change">사진 바꾸기</button>
+
+    <script>
+      let $change = $("#change");
+      let $img = $("#img");
+
+      // $change.on("click", function () {
+      //   $.ajax({
+      //     url: "https://dog.ceo/api/breeds/image/random",
+      //     success: function (params) {
+      //       $img.attr("src", params.message);
+      //     },
+      //   });
+      // });
+
+      function fetch() {
+        $.ajax({
+          url: "https://dog.ceo/api/breeds/image/random",
+          success: function (params) {
+            $img.attr("src", params.message);
+          },
+        });
+      }
+      fetch();
+      $change.on("click", fetch);
+    </script>
+  </body>
+</html>

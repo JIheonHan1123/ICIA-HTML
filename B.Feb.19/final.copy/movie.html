@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Json</title>
+  </head>
+  <body>
+    <!-- 
+      요청(request): 사용자가 서버로
+            - irum은 spring, pwd는 1234라는 정보를 보내려고 한다면
+            - 약속된 형식으로 보내야 함
+               urlencoded: ?irum=spring&pwd=123
+               json: {'irum':'spring', 'pwd':'1234'}
+      응답(response): 서버가 사용자로
+     -->
+    <form action="#">
+      <input type="text" name="irum" value="=spring" />
+      <input type="password" name="pwd" value="1234" />
+      <button>보내기</button>
+    </form>
+    <script>
+      // js객체: 서버로 전송 불가능
+      let ar = { irum: "spring", pwd: "1234" };
+      // js객체를 json으로 변환: 서버로 전송 가능
+      // json은 js객체를 문자열로 변환하는 형식임
+      let result = JSON.stringify(ar);
+      console.log(result);
+    </script>
+  </body>
+</html>
