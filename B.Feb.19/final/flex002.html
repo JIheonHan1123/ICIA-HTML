@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .aside {
+      width:100px;
+      height:100px;
+      border: 1px solid red;
+    }
+    .parent {
+      display: flex;
+      width: 600px;
+      height: 300px;
+      border: 1px solid darkcyan;
+      /* 주축 방향(기본은 row. 수평방향) : 가운데*/
+      justify-content: center;
+      /* 반대축 방향 : 가운데*/
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="aside">1</div>
+    <div class="aside">2</div>
+    <div class="aside">3</div>
+  </div>
+</body>
+</html>

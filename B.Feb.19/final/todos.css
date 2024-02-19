@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#page {
+  width: 1000px;
+  margin: 0 auto;
+}
+header, nav, footer {
+  height: 50px;
+  border : 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+aside {
+  width: 100px;
+  height:200px;
+  background-color: lightseagreen;
+}
+section {
+  width: 800px;
+  min-height: 600px;
+  background-color: white;
+}
+main {
+  display: flex;
+  background-color: #eee;
+}
+
+#search input {
+  width: 250px;
+  margin-left: 20px;
+  margin-right: 5px;
+  border: none;
+}
+#search {
+  width: 300px;
+  border: 1px solid #ddd;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+nav {
+  background-color: #333;
+}
+nav>ul {
+  list-style: none;
+  display: flex;
+  /* boot-strap */
+  margin: 0;
+}
+nav>ul>li {
+  background-color: #333;
+  width: 120px;
+  height: 50px;
+}
+nav>ul>li>a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+  text-decoration: none;
+  height: 100%;
+}
+nav>ul>li:hover {
+  background-color: #111;
+}
+nav>ul>li:hover a {
+  color:#aaa
+}
